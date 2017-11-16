@@ -1,0 +1,102 @@
+<div id="newcard_box">
+    
+    <div id="box1">
+        <div id="settings" *ngIf="form_card">
+            <h2>Créez votre carte de visite</h2>
+
+            <p>Personnalisez votre carte de visite !</p>
+
+            <br /><br />
+            <ul>
+                <li>
+                    <label>Nom</label>
+                    <input type="text" name="nom" [(ngModel)]="form_card.nom">
+                </li>
+                <li>
+                    <label>Métier</label>
+                    <input type="text" name="metier" [(ngModel)]="form_card.metier">
+                </li>
+                <li>
+                    <label>Description</label>
+                    <textarea name="description" [(ngModel)]="form_card.description"></textarea>
+                </li>
+            </ul>
+
+
+            <h3>Contact</h3>
+
+            <ul>
+                <li>
+                    <label>Email</label>
+                    <input type="text" name="email" [(ngModel)]="form_card.email">
+                </li>
+                <li>
+                    <label>N° de téléphone</label>
+                    <input type="number" name="tel" [(ngModel)]="form_card.tel">
+                </li>
+                <li>
+                    <label>Adresse</label>
+                    <input type="text" name="adresse" [(ngModel)]="form_card.adresse">
+                </li>
+            </ul>
+
+
+            <h3>Images</h3>
+            
+                <ul>
+                    <li>
+                        <label>Profil</label>
+                        <input type="text" name="imgprofil" [(ngModel)]="form_card.imgprofil">
+                    </li>
+                    <li>
+                        <label>Fond</label>
+                        <input type="text" name="imgbg" [(ngModel)]="form_card.imgbg">
+                    </li>
+                </ul>
+        </div>
+    </div>
+
+
+    <div id="box2">
+        <div id="preview_box" appColorbg [colorbg]="form_card.colorbg">
+
+            <img id="bg_box" src="{{ form_card.imgbg }}">
+
+            <div id="info_box">
+                <div id="photo" class="info">
+                    <img src="{{ form_card.imgprofil }}" width="100px">
+                </div>
+                <div id="info1" appColortext [colortext]="form_card.colortext">
+                    <h5>{{ form_card.metier }}</h5>
+                    {{ form_card.description }}
+                </div>
+                <div id="info2" appColortext [colortext]="form_card.colortext">
+                    <h4>{{ form_card.nom }}</h4>
+                </div>
+                <div id="info3" appColortext [colortext]="form_card.colortext">
+                    {{ form_card.email }}<br />
+                    {{ form_card.tel }}<br />
+                    {{ form_card.adresse }}
+                </div>
+            </div>
+        </div>
+
+        <div id="settings_couleurs">
+            <h3>Couleurs</h3>
+            
+                <ul>
+                    <li>
+                        <label>Couleur du texte</label>
+                        <app-color (event)="changeTextColor($event)"></app-color>
+                    </li>
+                    <li>
+                        <label>Couleur du fond</label>
+                        <app-color (event)="changeBgColor($event)"></app-color>
+                    </li>
+                </ul>
+
+            <a routerLink="/home" id="enregistrercard" (click)="save()">Enregistrer</a>
+        </div>
+
+    </div>
+</div>

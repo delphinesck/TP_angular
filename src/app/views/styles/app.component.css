@@ -1,0 +1,186 @@
+nav {
+    top: 0px;
+    background-color: #454552;
+    color: white;
+    width: 100%;
+    height: 100px;
+}
+
+#cardslist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#createnewcard {
+    background-color: #d3d3d3;
+    border: 1px solid #bbbbbb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+    display: block;
+}
+
+.cardpreview {
+    background-color: #d3d3d3;
+    border: 1px solid #bbbbbb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0px;
+    width: 90px;
+    font-size: 30px;
+}
+
+#newcard_box {
+    margin: auto;
+    width: 1200px;
+    background-color: lightgrey;
+    padding: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+#box1 {
+    width: 700px;
+}
+
+#box2 {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    width: 500px;
+    font-size: 18px;
+}
+
+input[type="number"] {
+    width:500px;
+    font-size: 18px;
+}
+
+textarea {
+    width: 500px;
+    font-size: 18px;
+    height: 80px;
+}
+
+#bg_box {
+    z-index: 1;
+    width: 420px;
+    height: 230px;
+    position: absolute;
+}
+
+#preview_box {
+    width: 420px;
+    height: 230px;
+    margin: 0px;
+    left: 720px;
+    border: 1px solid black;
+}
+
+#info_box {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#photo {
+    z-index: 2;
+    width: 100px;
+    height: 115px;
+    margin: 15px 0px 8px 20px;
+}
+
+#info1 {
+    z-index: 3;
+    margin-left: 20px;
+    width: 260px;
+    margin: 15px 20px 10px;
+}
+
+#info2 {
+    z-index: 4;
+    width: 150px;
+    margin: 0px 20px 10px;
+}
+
+#info3 {
+    z-index: 5;
+    margin-left: 20px;
+    width: 210px;
+    margin: 0px 20px 10px 0px;
+    text-align: right;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 19px;
+}
+
+#settings_couleurs {
+    margin-top: 50px;
+}
+
+#enregistrercard {
+    margin-top: 100px;
+    width: 150px;
+    text-align: center;
+    margin: 100px calc(50% - 75px) 0px calc(50% - 75px);
+    display: block;
+    padding: 15px;
+    background-color: white;
+    color: rgb(255, 115, 0);
+    text-decoration: none;
+}
+
+.visitcard {
+    height: 100px;
+    width: 180px;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+#mini_bgbox {
+    z-index: -1;
+    width: 180px;
+    height: 100px;
+    position: absolute;
+    opacity: 0.5;
+}
+
+#mini_infobox {
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}

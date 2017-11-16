@@ -1,0 +1,11 @@
+<!-- <div class="cardpreview" *ngFor="let card of cards let i=index" (click)="selected_card=card">
+    <app-card [card]="card" [index]="i" ></app-card>
+</div> -->
+
+<div id="cardslist">
+    <div id="createnewcard" routerLink="/newcard"> + </div>
+
+    <div class="visitcard" *ngFor="let card of mycards">
+        <app-card [card]="card" ></app-card>
+    </div>
+</div>
